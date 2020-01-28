@@ -24,7 +24,7 @@ const styles = theme => ({
   }
 });
 
-class PrimeButton extends Component {
+export class PrimeButton extends Component {
   render() {
     const { classes } = this.props;
     return (

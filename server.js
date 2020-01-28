@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
 });
 
 // Plug in routes
-app.use(require('./routes'));
+app.use(require('./api/routes'));
 
 // Serve UI in dist folder
 app.use(express.static('build'));

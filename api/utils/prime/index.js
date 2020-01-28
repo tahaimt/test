@@ -1,5 +1,5 @@
 const debug = require('debug');
-const { isInt } = require('../');
+const { isInt } = require('..');
 
 const generatePrimes = function (range) {
   let primes = [];

@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { app, httpServer } = require('../server');
+const { app, httpServer } = require('../../../server');
 
 describe('Prime Endpoint Integration Tests', () => {
   it('should return 400 error due to empty input', async (done) => {

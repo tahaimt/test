@@ -1,4 +1,4 @@
-const getMedian = require('../routes/utils/median');
+const getMedian = require('../../../api/utils/median');
 
 describe('Median Finder Unit Tests', () => {
   it('should throw an error on no input', async (done) => {

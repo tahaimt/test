@@ -1,4 +1,4 @@
-const generatePrimes = require('../routes/utils/prime');
+const generatePrimes = require('../../../api/utils/prime');
 
 describe('Prime Generator Unit Tests', () => {
   it('should return no prime number less than a very small number', async (done) => {

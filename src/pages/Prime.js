@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React,  { Component } from 'react';
 import { connect } from 'react-redux';
 import withStyles from '@material-ui/styles/withStyles';
@@ -72,21 +71,10 @@ class Prime extends Component {
     this.state = {
       number: 0
     };
-    this.handleOnSubmit = this.handleOnSubmit.bind(this)
-    this.handleOnClear = this.handleOnClear.bind(this)
-    this.handleOnChangeLazy = this.handleOnChangeLazy.bind(this)
-  }
-  
-  componentWillMount () {
-    // This is done to improve the performance if a lot of components are loaded on the page (came across the issue during testing)
-    this.updateNumberDebounced = _.debounce(function (e) {
-      this.setState({number: e.target.value});
-    }, 200);
   }
 
-  handleOnChangeLazy = (event) => {
-    event.persist();
-    this.updateNumberDebounced(event);
+  handleOnChange = (event) => {
+    this.setState({number: event.target.value});
   }
 
   handleOnSubmit = () => {
@@ -122,7 +110,8 @@ class Prime extends Component {
                         inputProps={{style: { textAlign: 'right' }}}
                         className={classes.textField}
                         margin="normal"
-                        onChange={this.handleOnChangeLazy}
+                        value={this.state.number}
+                        onChange={this.handleOnChange}
                         onKeyPress={(event) => { 
                           if (event.key === 'Enter') {
                             this.handleOnSubmit(event);

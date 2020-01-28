@@ -18,7 +18,7 @@ afterEach(() => {
   container = null;
 });
 
-it("renders with or without a name", () => {
+xit("renders with or without a name", () => {
   act(() => {
     render(<Prime />, container);
   });

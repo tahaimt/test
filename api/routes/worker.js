@@ -1,6 +1,6 @@
 const { Worker, workerData, isMainThread, parentPort } = require('worker_threads');
-const generatePrimes = require('./utils/prime');
-const getMedian = require('./utils/median');
+const generatePrimes = require('../utils/prime');
+const getMedian = require('../utils/median');
 
 if (isMainThread) {
   module.exports = async function getMedianOfPrimesUnderNumberAsync(raw) {

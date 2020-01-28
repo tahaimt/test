@@ -1,5 +1,5 @@
 const { checkSchema, validationResult } = require('express-validator');
-const errorHandler = require('./utils/errorHandler');
+const errorHandler = require('../utils/errorHandler');
 
 const getMedianOfPrimesUnderNumberAsync = require('./worker')
 
