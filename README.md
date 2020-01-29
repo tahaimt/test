@@ -6,15 +6,22 @@ The project comprises of a backend and a frontend module. Backend files are plac
 - API code is run outside of the main thread to improve route availability during expensive computations.
 - Input validation is performed at both levels ie. frontend & backend.
 
+Note: All commands were tested on the following versions of Node, npm and yarn on Windows 10 and macOS Catalina 10.15.2
+
+|---------| Windows |  macOS |
+|---------|---------|--------|
+|    Node |   12.6.0| 12.14.1|
+|     npm |    6.9.0|  6.13.4|
+|    yarn |   1.19.1|  1.21.1|
 
 ## Download Dependencies
 
-1. Install Nodejs (and npm or yarn)
+1. Install Nodejs (and npm or yarn) as admin or root, preferably v12.14.1(npm: 6.13.4, yarn 1.12.1) or v12.6.0(npm: 6.9.0, yarn 1.19.1).
 2. Execute one of the following commands
    `npm install`
       OR
    `yarn`
-
+   
 ## App (for your convinience, frontend files are already built and served from express)
 
 1. Navigate to root directory
@@ -55,9 +62,12 @@ You can execute tests by running one of the following commands from the root.
 
 Execute the following to start a cluster
 
-1. Install pm2 package globally (with npm or yarn)
+1. Install pm2 package globally (with npm or yarn) as admin or root
+
    `npm install -g pm2`
+   
 2. Execute the following command from root
+
    `pm2 start server.js -i 4`
 
 To stop the cluster, execute the following command
