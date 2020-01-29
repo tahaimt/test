@@ -16,7 +16,7 @@ Note: All commands were tested on the following versions of Node, npm and yarn o
 
 ## Download Dependencies
 
-1. Install Nodejs (and npm or yarn) as admin or root, preferably v12.14.1(npm: 6.13.4, yarn 1.12.1) or v12.6.0(npm: 6.9.0, yarn 1.19.1).
+1. Install Nodejs (and npm or yarn) as admin or root, preferably the versions above.
 2. Execute one of the following commands
    `npm install`
       OR
