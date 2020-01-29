@@ -14,7 +14,7 @@ const styles = theme => ({
     position: 'absolute',
     top: '50%',
     left: '50%',
-    marginTop: -12,
+    marginTop: -11,
     marginLeft: -12,
   },
   wrapper: {

@@ -15,7 +15,7 @@ The project comprises of a backend and a frontend module. Backend files are plac
       OR
    `yarn`
 
-## App
+## App (for your convinience, frontend files are already built and served from express)
 
 1. Navigate to root directory
 2. Execute the following command
@@ -53,9 +53,16 @@ You can execute tests by running one of the following commands from the root.
 
 ## To scale to 4 processes (the route defined in the api does use a worker to execute code in nonblocking fashion, this however increases number of listeners)
 
-Execute the following
+Execute the following to start a cluster
 
+1. Install pm2 package globally (with npm or yarn)
+   `npm install -g pm2`
+2. Execute the following command from root
    `pm2 start server.js -i 4`
+
+To stop the cluster, execute the following command
+
+   `pm2 stop server.js -i 4`
 
 ## Build UI after making changes, and to serve with Express
 
