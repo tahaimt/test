@@ -1,8 +1,9 @@
 import React,  { Component } from 'react';
-import withStyles from '@material-ui/styles/withStyles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Chip from '@material-ui/core/Chip';
+
 import PropTypes from 'prop-types';
+
+import withStyles from '@material-ui/styles/withStyles';
+import { CssBaseline, Chip } from '@material-ui/core';
 
 const styles = theme => ({
     wrapper: {
@@ -11,7 +12,7 @@ const styles = theme => ({
     }
 });
 
-class PrimeItem extends Component { 
+export class PrimeItem extends Component { 
     render() {
     const { classes } = this.props;
 

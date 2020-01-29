@@ -1,17 +1,26 @@
 # Instructions
+## Layout
+The project comprises of a backend and a frontend module. Backend files are placed inside the root directory and frontend code files are placed inside \<root\>/src. However, all commands below should be executed from the root directory.
+
+- Errors are handled on the api route and an action appropriate message is served to the ui with error code, which is then shown to the user. Similarly, errors are also handled on all redux actions.
+- API code is run outside of the main thread to improve route availability during expensive computations.
+- Input validation is performed at both levels ie. frontend & backend.
+
 
 ## Download Dependencies
 
-1. Install Nodejs (and npm)
-2. Execute the following command
+1. Install Nodejs (and npm or yarn)
+2. Execute one of the following commands
    `npm install`
+      OR
+   `yarn`
 
-## Backend
+## App
 
 1. Navigate to root directory
 2. Execute the following command
    `npm start`
-Note: provide relative path to server.js as per your OS
+3. Navigate to the URL displayed in console
 
 ****
 
@@ -24,9 +33,11 @@ Note: provide relative path to server.js as per your OS
 
 ****
 
-## Tests
+## Tests (VS Code config is included, select Start Debugging or Run without Debugging from Debug menu option to run tests automatically )
 
-Install Jest globally
+Integation tests are included for the backend, while unit tests are included for both backend and frontend. I wanted to add a few puppeteer tests for smoke testing but couldn't due to time constraints.
+
+Install Jest globally (optional)
 
    `npm install -g Jest`
 
@@ -40,12 +51,12 @@ You can execute tests by running one of the following commands from the root.
     
 - npm test
 
-## To scale
+## To scale to 4 processes (the route defined in the api does use a worker to execute code in nonblocking fashion, this however increases number of listeners)
 
 Execute the following
 
-   `pm2 start app.js -i 4`
+   `pm2 start server.js -i 4`
 
-## Build UI after making changes to serve with Express
+## Build UI after making changes, and to serve with Express
 
    `npm run build`

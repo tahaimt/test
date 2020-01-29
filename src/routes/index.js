@@ -6,8 +6,6 @@ export default props => (
   <HashRouter>
       <Switch>
         <Route exact path="/" component={Prime} />
-        {/* <Route exact path="/search" component={Search} />
-        <Route exact path="/wizard" component={Wizard} /> */}
       </Switch>
   </HashRouter>
 );

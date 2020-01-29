@@ -26,8 +26,8 @@ describe('Prime Generator Unit Tests', () => {
     expect(response).toEqual([2]);
     done();
   });
-  it('should correctly generate prime numbers upto 10', async (done) => {
-    for(var i = 2; i < 10; i++) {
+  it('should correctly generate prime numbers upto 200', async (done) => {
+    for(var i = 2; i < 200; i++) {
       let primeNumbersList = generatePrimes(i);
       primeNumbersList.forEach(number => {
         for (let factor = 2; factor < number; factor++){

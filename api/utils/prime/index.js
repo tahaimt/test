@@ -37,7 +37,6 @@ const generatePrimes = function (range) {
 
   if (process.env.NODE_ENV !== 'test') {
     console.log(`N: ${range}`);
-
     console.log(`Prime Numbers < ${range}: ${primes}`);
   }
   return primes;

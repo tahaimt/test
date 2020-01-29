@@ -1,10 +1,9 @@
 import React,  { Component } from 'react';
-import withStyles from '@material-ui/styles/withStyles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Button from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { green } from '@material-ui/core/colors';
 import PropTypes from 'prop-types';
+
+import withStyles from '@material-ui/styles/withStyles';
+import { CssBaseline, Button, CircularProgress } from '@material-ui/core';
+import { green } from '@material-ui/core/colors';
 
 const styles = theme => ({
   button: {

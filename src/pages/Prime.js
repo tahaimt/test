@@ -1,21 +1,18 @@
 import React,  { Component } from 'react';
-import { connect } from 'react-redux';
-import withStyles from '@material-ui/styles/withStyles';
 import { withRouter } from 'react-router-dom';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+import { connect } from 'react-redux';
+
+import withStyles from '@material-ui/styles/withStyles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { red, green } from '@material-ui/core/colors';
+import MuiAlert from '@material-ui/lab/Alert';
+import { CssBaseline, Paper, Grid, TextField, Typography } from "@material-ui/core";
+
 import Header from '../drawer/Header';
 import CustomButton from '../components/button';
-import MuiAlert from '@material-ui/lab/Alert';
-import Typography from "@material-ui/core/Typography";
 import PrimeItem from '../components/primeItem';
 
 import { getPrimeNumbers, reset } from '../store/actions/prime';
-
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { red, green } from '@material-ui/core/colors';
 
 const customTheme = createMuiTheme({
   palette: {
@@ -29,6 +26,7 @@ const styles = theme => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 200,
+    textAlign: 'right'
   },
   root: {
     flexGrow: 1,
