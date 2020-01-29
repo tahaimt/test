@@ -8,7 +8,7 @@ The project comprises of a backend and a frontend module. Backend files are plac
 
 Note: All commands were tested on the following versions of Node, npm and yarn on Windows 10 and macOS Catalina 10.15.2
 
-|---------| Windows |  macOS |
+|         | Windows |  macOS |
 |---------|---------|--------|
 |    Node |   12.6.0| 12.14.1|
 |     npm |    6.9.0|  6.13.4|
